@@ -134,7 +134,7 @@
         { title: 'পার্ট-২: ব্যবসায়িক পরিকল্পনা সংক্রান্ত তথ্যাদি', show: isNew, fields: [
           { id: 'p2_idea', num: '০১', label: 'ব্যবসায়িক ধারণা/উদ্যোগের সংক্ষিপ্ত বিবরণ', help: '২০০ শব্দের মধ্যে', req: true, type: 'textarea', rows: 7, words: 200, full: true, show: isNew },
           { id: 'p2_buyers', num: '০২', label: 'সম্ভাব্য ক্রেতা', req: true, full: true, show: isNew },
-          { id: 'p2_start', num: '০৩', label: 'কত সময়ের মধ্যে ব্যবসায় শুরু করার পরিকল্পনা রয়েছে', req: true, full: true, show: isNew, ph: 'যেমন: ঋণ পাওয়ার ৩ মাসের মধ্যে' },
+          { id: 'p2_start', num: '০৩', label: 'কত সময়ের মধ্যে ব্যবসায় শুরু করার পরিকল্পনা রয়েছে', help: 'পরিকল্পিত সময় ও প্রয়োজনীয় ব্যাখ্যা লিখুন', req: true, type: 'textarea', rows: 3, full: true, show: isNew, ph: 'যেমন: ঋণ পাওয়ার ৩ মাসের মধ্যে; অনুমোদন পেলে দোকান প্রস্তুত করার কাজ শুরু হবে' },
           { id: 'p2_type', num: '০৪', label: 'ব্যবসার ধরন', sub: 'উৎপাদন / সেবা / ব্যবসা', req: true, type: 'radio', opts: BIZ_TYPE, full: true, show: isNew },
           { id: 'p2_type_desc', num: '০৪', label: 'ব্যবসার ধরনের বিবরণ', type: 'textarea', rows: 2, full: true, show: isNew },
           { id: 'p2_location', num: '০৫', label: 'ব্যবসার সম্ভাব্য অবস্থান', help: 'গ্রাম/মহল্লা, ইউনিয়ন, উপজেলা', req: true, type: 'textarea', rows: 2, full: true, show: isNew },
