@@ -101,7 +101,7 @@
   add(4, 202.3, 179.3, 356.6, 139.4, P2(T('p2_compete')), { multi: true });
   add(4, 202.3, 356.3, 356.6, 21.4, P3(T('p3_name')));
   add(4, 202.3, 378.3, 356.6, 53.4, P3((d) => F.type(d, 'p3_type', 'p3_type_desc')), { multi: true });
-  add(4, 202.3, 432.3, 356.6, 21.4, P3((d) => S.fmtDate(d.p3_start)));
+  add(4, 202.3, 432.3, 356.6, 21.4, P3((d) => /^\d{4}-\d{2}-\d{2}$/.test(d.p3_start || '') ? S.fmtDate(d.p3_start) : v(d, 'p3_start')), { multi: true });
   add(4, 202.3, 454.3, 356.6, 53.4, P3(F.license), { multi: true });
   add(4, 202.3, 508.3, 356.6, 71.4, P3(T('p3_price')), { multi: true });
   const P4COLS = [[202.3, 104.6], [307.3, 122.6], [430.3, 128.6]];
@@ -185,4 +185,3 @@
 
   window.FormPrint = { render, fit, SLOTS, PAGE_W, PAGE_H };
 })();
-
