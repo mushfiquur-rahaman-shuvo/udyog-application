@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.maateen.me; font-src 'self' data: https://fonts.gstatic.com https://fonts.maateen.me; img-src 'self' data: blob: https://www.vimverselab.com https://ourvimganj.com; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>উদ্যোগ (UDYOG) আবেদন সহায়ক</title>
+  <meta name="description" content="উদ্যোগ (UDYOG) তরুণ উদ্যোক্তা অর্থায়ন কর্মসূচির আবেদন ফরম সহজে পূরণ করুন, অফিসিয়াল ফরমের হুবহু কপি প্রিন্ট বা PDF করুন।">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="js/tw-theme.js?v=202611191657"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen">
+  <div id="hdr"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-40 -right-32 size-[34rem] rounded-full bg-brand-200/40 blur-3xl"></div>
+        <div class="absolute -bottom-48 -left-40 size-[30rem] rounded-full bg-sun-400/20 blur-3xl"></div>
+      </div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+        <div>
+          <span class="chip bg-white text-brand-700 ring-1 ring-brand-200"><i data-lucide="calendar-clock" class="size-3.5"></i><span id="deadline-chip">আবেদনের শেষ তারিখ ৩০ নভেম্বর ২০২৬</span></span>
+          <h1 class="mt-5 text-4xl font-bold leading-[1.2] tracking-tight text-brand-900 sm:text-5xl">
+            উদ্যোগের আবেদন ফরম<br><span class="text-brand-500">মিনিটেই পূরণ</span>, প্রিন্ট হবে <span class="relative whitespace-nowrap">হুবহু অফিসিয়াল<svg class="absolute -bottom-2 left-0 w-full text-sun-400" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M2 7c50-5 140-6 196-2" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">উপজেলাভিত্তিক তরুণ উদ্যোক্তা অনুসন্ধান, চিহ্নিতকরণ ও অর্থায়ন কর্মসূচির ৭ পৃষ্ঠার ফরম ধাপে ধাপে পূরণ করুন। প্রতিটি অক্ষর সাথে সাথে আপনার ব্রাউজারে সংরক্ষিত হয়, তাই রিলোড দিলেও তথ্য হারাবে না।</p>
+          <div class="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:items-center">
+            <a href="form.html" class="btn btn-primary h-12 px-6 text-base"><i data-lucide="file-plus-2"></i>নতুন আবেদন শুরু করুন</a>
+            <a href="dashboard.html" class="btn btn-outline h-12 px-6 text-base"><i data-lucide="layout-dashboard"></i>আমার আবেদনসমূহ</a>
+          </div>
+          <div id="hero-sponsor" class="mt-5"></div>
+          <div id="resume" class="mt-6"></div>
+        </div>
+
+        <!-- Visual: stacked form pages -->
+        <div class="relative mx-auto w-full min-w-0 max-w-md lg:max-w-none">
+          <div class="absolute inset-x-10 top-6 bottom-0 rotate-6 rounded-3xl bg-brand-800/90"></div>
+          <div class="absolute inset-x-6 top-3 bottom-3 -rotate-3 rounded-3xl bg-sun-400/90"></div>
+          <div class="relative overflow-hidden rounded-3xl border border-line bg-white p-3 shadow-2xl shadow-brand-900/20">
+            <div id="hero-page" class="relative aspect-[595/842] w-full overflow-hidden rounded-2xl bg-white"></div>
+          </div>
+          <div class="absolute -bottom-5 -left-4 flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3 shadow-xl sm:-left-8">
+            <span class="grid size-10 place-items-center rounded-xl bg-brand-50 text-brand-600"><i data-lucide="circle-check" class="size-5"></i></span>
+            <div class="leading-tight"><div class="text-sm font-bold">স্বয়ংক্রিয় সংরক্ষণ</div><div class="text-xs text-muted">প্রতিটি অক্ষর সেভ হয়</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" id="features"></div>
+    </section>
+
+    <!-- How it works -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      <div class="card overflow-hidden">
+        <div class="grid lg:grid-cols-[0.85fr_1.15fr]">
+          <div class="bg-brand-800 p-8 text-white sm:p-10">
+            <h2 class="text-2xl font-bold sm:text-3xl">ফরমে যা যা লাগবে</h2>
+            <p class="mt-3 text-brand-100/90">ফরমের ৫টি পার্ট ৬টি সহজ ধাপে ভাগ করা হয়েছে। যেকোনো সময় থামুন, পরে এসে আবার শুরু করুন।</p>
+            <h3 class="mt-8 text-sm font-semibold uppercase tracking-wider text-sun-400">সংযুক্তি (আবেদনের সঙ্গে দাখিলযোগ্য)</h3>
+            <ul class="mt-3 space-y-2.5 text-[15px]">
+              <li class="flex gap-2.5"><i data-lucide="id-card" class="mt-0.5 size-4.5 shrink-0 text-sun-400"></i>জাতীয় পরিচয়পত্র/জন্মনিবন্ধন সনদের কপি</li>
+              <li class="flex gap-2.5"><i data-lucide="graduation-cap" class="mt-0.5 size-4.5 shrink-0 text-sun-400"></i>সর্বশেষ শিক্ষাগত যোগ্যতার সনদের কপি (যদি থাকে)</li>
+              <li class="flex gap-2.5"><i data-lucide="award" class="mt-0.5 size-4.5 shrink-0 text-sun-400"></i>দক্ষতা উন্নয়ন/উদ্যোক্তা উন্নয়ন প্রশিক্ষণ সনদ (যদি থাকে)</li>
+              <li class="flex gap-2.5"><i data-lucide="landmark" class="mt-0.5 size-4.5 shrink-0 text-sun-400"></i>ওয়ার্ড কমিশনার/কাউন্সিলর কর্তৃক প্রদত্ত নাগরিক সনদ</li>
+              <li class="flex gap-2.5"><i data-lucide="image" class="mt-0.5 size-4.5 shrink-0 text-sun-400"></i>পাসপোর্ট সাইজ ছবি (২ কপি)</li>
+            </ul>
+          </div>
+          <ol class="grid gap-px bg-line sm:grid-cols-2" id="steps"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner marketplace + sponsor (filled by js/pages/index.js) -->
+    <section class="mx-auto max-w-7xl px-4 pb-10 sm:px-6">
+      <h2 class="mb-4 text-xl font-bold text-brand-900 sm:text-2xl">উদ্যোক্তাদের জন্য সহায়ক</h2>
+      <div id="partners" class="grid gap-4 lg:grid-cols-2"></div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
+      <div class="flex flex-col items-start gap-4 rounded-card border border-sun-400/40 bg-sun-400/10 p-6 sm:flex-row sm:items-center">
+        <span class="grid size-11 shrink-0 place-items-center rounded-2xl bg-sun-400/25 text-sun-500"><i data-lucide="map" class="size-5.5"></i></span>
+        <p class="flex-1 text-[15px] leading-relaxed text-ink"><b>লক্ষ্য করুন:</b> মানিকগঞ্জ, ফেনী, ভোলা, নওগাঁ, হবিগঞ্জ, ঝিনাইদহ, নেত্রকোণা ও রংপুর জেলা ব্যতীত অন্যান্য জেলার জন্য আবেদনের সর্বশেষ তারিখ ৩০ নভেম্বর ২০২৬। পূরণকৃত ফরম প্রিন্ট করে সংযুক্তিসহ নিকটস্থ ব্যাংক শাখায় জমা দিন।</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="ftr"></div>
+
+  <script src="js/store.js?v=202611191657"></script>
+  <script src="js/schema.js?v=202611191657"></script>
+  <script src="js/ui.js?v=202611191657"></script>
+  <script src="assets/form/form-pages.js?v=202611191657" defer></script>
+  <script src="js/pages/index.js?v=202611191657"></script>
+</body>
+</html>
+
