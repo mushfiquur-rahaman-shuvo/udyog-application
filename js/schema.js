@@ -152,7 +152,7 @@
           { id: 'p3_name', num: '০১', label: 'ব্যবসা প্রতিষ্ঠানের নাম', req: true, full: true, show: isExisting },
           { id: 'p3_type', num: '০২', label: 'ব্যবসার ধরন', sub: 'উৎপাদন / সেবা / ব্যবসা', req: true, type: 'radio', opts: BIZ_TYPE, full: true, show: isExisting },
           { id: 'p3_type_desc', num: '০২', label: 'ব্যবসার ধরনের বিবরণ', type: 'textarea', rows: 2, full: true, show: isExisting },
-          { id: 'p3_start', num: '০৩', label: 'ব্যবসা শুরুর তারিখ', help: 'সঠিক দিন জানা না থাকলে মাস/বছর বা আনুমানিক সময় লিখুন', req: true, ph: 'যেমন: ২০২২ সালের মাঝামাঝি', full: true, show: isExisting },
+          { id: 'p3_start', num: '০৩', label: 'ব্যবসা শুরুর সময়/বিবরণ', help: 'সঠিক দিন জানা না থাকলে মাস/বছর বা আনুমানিক সময় লিখুন', req: true, type: 'textarea', rows: 3, ph: 'যেমন: ২০২২ সালের মাঝামাঝি; সঠিক তারিখ জানা নেই', full: true, show: isExisting },
           { id: 'p3_license', num: '০৪', label: 'ট্রেড লাইসেন্স আছে কিনা', req: true, type: 'radio', opts: YES_NO, show: isExisting },
           { id: 'p3_license_date', num: '০৪', label: 'ট্রেড লাইসেন্স ইস্যুর তারিখ', type: 'date', show: (d) => isExisting(d) && d.p3_license === 'হ্যাঁ' },
           { id: 'p3_license_no', num: '০৪', label: 'ট্রেড লাইসেন্স নম্বর', show: (d) => isExisting(d) && d.p3_license === 'হ্যাঁ' },
