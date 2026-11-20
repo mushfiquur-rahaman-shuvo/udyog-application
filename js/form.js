@@ -183,8 +183,7 @@
   }
 
   // ---------- render ----------
-  function rende
-rStep() {
+  function renderStep() {
     const s = STEPS[step];
     document.getElementById('step-head').innerHTML = `
       <div class="flex items-center gap-2 text-sm font-semibold text-brand-600"><span class="chip bg-brand-800 text-white">${s.part}</span>ধাপ ${S.toBn(step + 1)} / ${S.toBn(STEPS.length)}</div>
@@ -456,8 +455,7 @@ rStep() {
   document.querySelectorAll('[data-clear]').forEach((b) => b.addEventListener('click', clearAll));
   async function clearAll() {
     menu.close();
-    if (!app || !Object.keys(data).length) ret
-urn UI.toast('মুছে ফেলার মতো কোনো তথ্য নেই', 'warn');
+    if (!app || !Object.keys(data).length) return UI.toast('মুছে ফেলার মতো কোনো তথ্য নেই', 'warn');
     const ok = await UI.dialog({ title: 'সব তথ্য মুছে ফেলবেন?', icon: 'eraser', tone: 'danger', ok: 'হ্যাঁ, সব মুছুন',
       body: 'এই আবেদনের সব ঘরের লেখা ও ছবি মুছে যাবে এবং আর ফেরত আনা যাবে না। আবেদনটি ড্যাশবোর্ডে ফাঁকা অবস্থায় থাকবে।' });
     if (!ok) return;
@@ -481,4 +479,3 @@ urn UI.toast('মুছে ফেলার মতো কোনো তথ্য �
   const focus = UI.qs('focus');
   if (focus) setTimeout(() => goto(step, focus), 50);
 })();
-
