@@ -128,7 +128,7 @@
   const ROW_Y = [218.3, 236.3, 253.3, 270.3, 287.3, 305.3, 322.3, 339.3, 356.3, 374.3, 391.3, 408.3, 425.3];
   for (let i = 1; i <= 12; i++) {
     const y = ROW_Y[i - 1], h = ROW_Y[i] - y - 0.5;
-    add(6, 234.3, y, 127.6, h, T('e' + i + '_desc'), { size: 8.5 });
+    add(6, 234.3, y, 127.6, h, T('e' + i + '_desc'), { multi: true, size: 8 });
     add(6, 362.3, y, 108.6, h, A('e' + i + '_amt'), { align: 'center', size: 8.5 });
     add(6, 471.3, y, 87.6, h, T('e' + i + '_src'), { align: 'center', size: 8.5 });
   }
