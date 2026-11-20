@@ -6,7 +6,7 @@
   const toBn = (v) => String(v ?? '').replace(/[0-9]/g, (d) => BN[d]);
   const toEn = (v) => String(v ?? '').replace(/[০-৯]/g, (d) => BN.indexOf(d));
   const parseNum = (v) => {
-    const s = toEn(v).replace(/[,\s৳টাকা]/g, '');
+    const s = toEn(v).replace(/[,\s৳টাকা]/g, '').replace(/\/-?$/, '');
     if (!s) return null;
     const n = Number(s);
     return Number.isFinite(n) ? n : null;
