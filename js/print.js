@@ -164,14 +164,21 @@
     root.querySelectorAll('.form-val').forEach((box) => {
       const span = box.firstElementChild;
       let size = parseFloat(box.dataset.size);
-      const min = 4;
       const multi = box.classList.contains('is-multi');
+      const cs = getComputedStyle(box);
+      const px = (v) => parseFloat(v) || 0;
+      // Measure only the usable content area, excluding the box padding.
+      // Comparing against clientWidth/clientHeight alone lets wrapped text
+      // spill through the printed table rules by exactly the padding amount.
+      const availW = box.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
+      const availH = box.clientHeight - px(cs.paddingTop) - px(cs.paddingBottom);
+      const min = 3.5;
       // Compact wrapped answers a little before reducing the font size. This
       // preserves more readable text in the taller cells while avoiding clips.
       span.style.lineHeight = multi ? '1.08' : '1.15';
       const over = () => (box.classList.contains('is-multi')
-        ? span.scrollHeight > box.clientHeight + 0.5 || span.scrollWidth > box.clientWidth + 0.5
-        : span.scrollWidth > box.clientWidth + 0.5);
+        ? span.scrollHeight > availH + 0.5 || span.scrollWidth > availW + 0.5
+        : span.scrollWidth > availW + 0.5);
       span.style.fontSize = size + 'pt';
       while (over() && size > min) { size -= 0.25; span.style.fontSize = size + 'pt'; }
     });
@@ -185,3 +192,4 @@
 
   window.FormPrint = { render, fit, SLOTS, PAGE_W, PAGE_H };
 })();
+
