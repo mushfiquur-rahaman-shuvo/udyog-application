@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.maateen.me; font-src 'self' data: https://fonts.gstatic.com https://fonts.maateen.me; img-src 'self' data: blob: https://www.vimverselab.com https://ourvimganj.com; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>আমার আবেদনসমূহ · উদ্যোগ</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="js/tw-theme.js?v=202611191657"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen">
+  <div id="hdr"></div>
+
+  <main class="mx-auto max-w-7xl px-4 pt-6 pb-24 sm:px-6 sm:py-8">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h1 class="text-2xl font-bold text-brand-900 sm:text-3xl">আমার আবেদনসমূহ</h1>
+        <p class="mt-1 text-[15px] text-muted sm:text-base">সব আবেদন শুধু এই ব্রাউজারে সংরক্ষিত। নিরাপদ রাখতে মাঝে মাঝে ব্যাকআপ নিন।</p>
+      </div>
+      <div class="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto">
+        <button id="btn-import" class="btn btn-outline"><i data-lucide="upload"></i>ইমপোর্ট</button>
+        <button id="btn-export" class="btn btn-outline"><i data-lucide="hard-drive-download"></i>ব্যাকআপ</button>
+        <a href="form.html" class="btn btn-primary max-sm:hidden"><i data-lucide="plus"></i>নতুন আবেদন</a>
+        <!-- phones: floating "new" button within thumb reach -->
+        <a href="form.html" class="btn btn-primary fixed right-4 bottom-[max(1.25rem,env(safe-area-inset-bottom))] z-30 h-14 rounded-full px-5 text-base shadow-xl shadow-brand-900/30 sm:hidden"><i data-lucide="plus" class="size-5!"></i>নতুন আবেদন</a>
+        <input type="file" id="file-import" accept="application/json,.json" class="hidden">
+      </div>
+    </div>
+
+    <div id="stats" class="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4"></div>
+    <div id="promo" class="mt-4"></div>
+
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+      <label class="relative min-w-0 flex-1">
+        <i data-lucide="search" class="pointer-events-none absolute top-1/2 left-3.5 size-4.5 -translate-y-1/2 text-muted"></i>
+        <input id="q" type="search" placeholder="নাম, NID বা ফোন নম্বর দিয়ে খুঁজুন" class="field-input pl-10">
+      </label>
+      <div class="flex rounded-xl border border-line bg-white p-1" id="filters">
+        <button data-f="all" class="rounded-lg px-3.5 py-1.5 text-sm font-semibold">সব</button>
+        <button data-f="draft" class="rounded-lg px-3.5 py-1.5 text-sm font-semibold">খসড়া</button>
+        <button data-f="done" class="rounded-lg px-3.5 py-1.5 text-sm font-semibold">সম্পূর্ণ</button>
+      </div>
+    </div>
+
+    <div id="list" class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+  </main>
+  <div id="ftr"></div>
+
+  <script src="js/store.js?v=202611191657"></script>
+  <script src="js/schema.js?v=202611191657"></script>
+  <script src="js/ui.js?v=202611191657"></script>
+  <script src="js/pages/dashboard.js?v=202611191657"></script>
+</body>
+</html>
+

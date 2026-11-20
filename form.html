@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.maateen.me; font-src 'self' data: https://fonts.gstatic.com https://fonts.maateen.me; img-src 'self' data: blob: https://www.vimverselab.com https://ourvimganj.com; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>আবেদন ফরম · উদ্যোগ</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="js/tw-theme.js?v=202611191657"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen">
+  <div id="hdr"></div>
+
+  <!-- Phones/tablets: application status bar, tap to open the steps drawer -->
+  <button type="button" id="m-bar" class="sticky top-14 z-20 flex w-full items-center gap-3 border-b border-line bg-white/90 px-4 py-2 text-left backdrop-blur sm:top-16 sm:px-6 lg:hidden" aria-label="সব ধাপ দেখুন">
+    <span class="relative size-10 shrink-0">
+      <svg viewBox="0 0 36 36" class="size-10 -rotate-90"><circle cx="18" cy="18" r="15.5" fill="none" class="stroke-brand-50" stroke-width="4"/><circle data-ring cx="18" cy="18" r="15.5" fill="none" class="stroke-brand-500 transition-all duration-500" stroke-width="4" stroke-linecap="round" stroke-dasharray="97.4" stroke-dashoffset="97.4"/></svg>
+      <span data-ring-pct class="absolute inset-0 grid place-items-center text-[10px] font-bold"></span>
+    </span>
+    <span class="min-w-0 flex-1 leading-tight">
+      <span data-side-name class="block truncate text-[15px] font-bold"></span>
+      <span class="flex items-center gap-1 truncate text-xs text-muted"><span data-save-state class="inline-flex items-center gap-1"></span></span>
+    </span>
+    <span class="chip shrink-0 bg-brand-50 py-1.5 text-brand-800"><i data-lucide="list-checks" class="size-4"></i>সব ধাপ</span>
+  </button>
+
+  <div class="mx-auto grid max-w-7xl gap-6 px-4 pt-5 pb-6 sm:px-6 lg:grid-cols-[17.5rem_1fr] lg:py-8">
+    <!-- Desktop sidebar (same content lives in the drawer on smaller screens) -->
+    <aside class="max-lg:hidden">
+      <div class="sticky top-24 space-y-4" data-side></div>
+    </aside>
+
+    <main class="min-w-0">
+      <div id="step-head" class="mb-5"></div>
+      <form id="form" class="space-y-4 sm:space-y-5" autocomplete="on" novalidate></form>
+      <div class="sticky bottom-0 z-10 -mx-4 mt-6 border-t border-line bg-white/95 px-3 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] backdrop-blur sm:mx-0 sm:mb-2 sm:rounded-2xl sm:border sm:px-4 sm:py-3">
+        <div class="flex items-center gap-2">
+          <button id="prev" class="btn btn-outline max-sm:w-10 max-sm:px-0" aria-label="পূর্ববর্তী ধাপ"><i data-lucide="arrow-left"></i><span class="max-sm:hidden">পূর্ববর্তী</span></button>
+          <nav id="step-dots" class="mx-auto flex items-center" aria-label="ধাপসমূহ"></nav>
+          <button id="next" class="btn btn-primary max-sm:w-10 max-sm:px-0" aria-label="পরবর্তী ধাপ"></button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/store.js?v=202611191657"></script>
+  <script src="js/schema.js?v=202611191657"></script>
+  <script src="js/ui.js?v=202611191657"></script>
+  <script src="js/form.js?v=202611191657"></script>
+</body>
+</html>
+

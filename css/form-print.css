@@ -1,0 +1,57 @@
+/* Printed form: each page is exactly the original PDF page (595.32 x 841.92 pt). */
+@import url('https://fonts.maateen.me/kalpurush/font.css');
+
+.form-page {
+  position: relative;
+  width: 595.32pt;
+  height: 841.92pt;
+  background: #fff;
+  overflow: hidden;
+  color: #000;
+}
+.form-page > svg.form-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.form-logo { position: absolute; display: block; }
+
+.form-val {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 2.5pt 4.5pt;
+  overflow: hidden;
+  font-family: 'Kalpurush', 'Nirmala UI', sans-serif;
+  color: #000;
+  line-height: 1.28;
+  display: flex;
+}
+.form-val > span { display: block; max-width: 100%; min-width: 0; }
+.form-val.is-line { align-items: center; white-space: nowrap; }
+.form-val.is-line > span { overflow: visible; }
+.form-val.is-multi { align-items: flex-start; white-space: pre-wrap; overflow-wrap: anywhere; }
+.form-val.is-multi > span { width: 100%; max-height: none; white-space: pre-wrap; overflow-wrap: anywhere; }
+.form-val.is-center { justify-content: center; text-align: center; }
+.form-val.is-bold { font-weight: 700; }
+
+.form-photo { position: absolute; padding: 3pt; box-sizing: border-box; }
+.form-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Screen: stack pages like a PDF viewer */
+.form-sheet { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.form-sheet .form-page { box-shadow: 0 1px 3px rgb(0 0 0 / 0.12), 0 12px 32px -12px rgb(0 0 0 / 0.25); }
+
+@media print {
+  /* A4. Pages are drawn at 1:1 scale of the original PDF (595.32 x 841.92 pt). */
+  @page { size: A4 portrait; margin: 0; }
+  html, body { margin: 0 !important; padding: 0 !important; background: #fff !important; }
+  #print-root { margin: 0 !important; padding: 0 !important; zoom: 1 !important; }
+  .form-sheet { display: block; gap: 0; }
+  .form-sheet .form-page { box-shadow: none; margin: 0; width: 595.32pt; height: 841.6pt; break-after: page; page-break-after: always; }
+  .form-sheet .form-page:last-child { break-after: auto; page-break-after: auto; }
+  .no-print { display: none !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+

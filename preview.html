@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.maateen.me; font-src 'self' data: https://fonts.gstatic.com https://fonts.maateen.me; img-src 'self' data: blob: https://www.vimverselab.com https://ourvimganj.com; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>প্রিভিউ · উদ্যোগ আবেদন ফরম</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/form/form-fonts.css?v=202611201200">
+  <link rel="stylesheet" href="css/form-print.css?v=202611201200">
+  <script src="js/tw-theme.js?v=202611191657"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen bg-[#e9edeb] print:bg-white">
+  <div id="hdr"></div>
+
+  <div id="pv-bar" class="no-print sticky top-14 z-20 border-b border-line bg-white/90 backdrop-blur sm:top-16">
+    <div class="mx-auto flex max-w-7xl items-center gap-2 px-3 py-2 sm:px-6 sm:py-2.5">
+      <a id="btn-edit" class="btn btn-outline max-sm:w-10 max-sm:px-0" aria-label="এডিট করুন"><i data-lucide="pencil"></i><span class="max-sm:hidden">এডিট করুন</span></a>
+      <div class="min-w-0 flex-1 px-1">
+        <div id="pv-name" class="truncate text-[15px] font-bold sm:text-base"></div>
+        <div id="pv-meta" class="truncate text-xs text-muted"></div>
+      </div>
+      <button id="btn-print" class="btn btn-primary max-sm:px-3.5"><i data-lucide="printer"></i><span class="sm:hidden">PDF</span><span class="max-sm:hidden">প্রিন্ট / PDF ডাউনলোড</span></button>
+    </div>
+  </div>
+
+  <!-- floating zoom control (outside the blurred toolbar so `fixed` is relative to the viewport) -->
+  <div id="zoom-pill" class="no-print fixed right-3 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 flex items-center rounded-full border border-line bg-white/95 p-0.5 shadow-lg shadow-black/15 backdrop-blur sm:right-6 sm:bottom-6">
+    <button id="zoom-out" class="btn btn-ghost btn-icon rounded-full" aria-label="ছোট করুন"><i data-lucide="zoom-out"></i></button>
+    <button id="zoom-fit" class="min-w-14 text-sm font-semibold text-muted hover:text-ink" aria-label="পেজ ফিট করুন" title="পেজ ফিট করুন"></button>
+    <button id="zoom-in" class="btn btn-ghost btn-icon rounded-full" aria-label="বড় করুন"><i data-lucide="zoom-in"></i></button>
+  </div>
+
+  <div id="tip" class="no-print mx-auto max-w-3xl px-3 pt-4 sm:px-6 sm:pt-5"></div>
+  <div id="promo" class="no-print mx-auto max-w-3xl px-3 pt-3 sm:px-6"></div>
+
+  <main class="overflow-x-auto px-2 pt-4 pb-24 sm:px-4 sm:py-6 print:p-0">
+    <div id="print-root" class="mx-auto w-fit"><div class="form-sheet" id="sheet"></div></div>
+  </main>
+  <div id="ftr"></div>
+
+  <script src="js/store.js?v=202611191657"></script>
+  <script src="js/schema.js?v=202611191657"></script>
+  <script src="js/ui.js?v=202611191657"></script>
+  <script src="assets/form/form-pages.js?v=202611191657"></script>
+  <script src="js/print.js?v=202611201200"></script>
+  <script src="js/pages/preview.js?v=202611201200"></script>
+</body>
+</html>
+
