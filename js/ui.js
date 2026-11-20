@@ -224,8 +224,7 @@
           <i data-lucide="${steps[si].icon}" class="size-3.5"></i>${steps[si].part} · ${steps[si].title}
         </div>
         <ul class="space-y-1">
-          ${byStep[si].map((m) => `<li><a href="form.html?id=${encod
-eURIComponent(app.id)}&step=${m.step}&focus=${encodeURIComponent(m.id)}" class="group flex items-start gap-2 rounded-lg px-2 py-1.5 text-[14.5px] text-ink hover:bg-brand-50">
+          ${byStep[si].map((m) => `<li><a href="form.html?id=${encodeURIComponent(app.id)}&step=${m.step}&focus=${encodeURIComponent(m.id)}" class="group flex items-start gap-2 rounded-lg px-2 py-1.5 text-[14.5px] text-ink hover:bg-brand-50">
             <span class="mt-2 size-1.5 shrink-0 rounded-full bg-berry-500"></span><span class="flex-1">${esc(m.label)}</span>
             <i data-lucide="arrow-up-right" class="mt-0.5 size-4 text-muted opacity-0 transition group-hover:opacity-100"></i></a></li>`).join('')}
         </ul>
@@ -262,4 +261,3 @@ eURIComponent(app.id)}&step=${m.step}&focus=${encodeURIComponent(m.id)}" class="
 
   window.UI = { esc, icons, qs, header, drawer, promo, footer, toast, dialog, missingWarning, relTime, download };
 })();
-
